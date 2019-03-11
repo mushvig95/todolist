@@ -1,0 +1,265 @@
+body {
+    overflow-x: hidden;
+}
+html {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+p,
+div {
+    margin: 0;
+    padding: 0;
+}
+.main_container {
+    padding-top: 30px;
+}
+
+.header_box {
+    font-family: 'Quicksand', sans-serif;
+    -border: 1px solid red;
+    text-align: center;
+}
+
+.header_box > p {
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.todobar_box {
+    border: 1px solid rgba(112, 112, 112, 0.507);
+    width: 40%;
+    display: flex;
+    height: 40px;
+    border-radius: 6px;
+    padding-left: 3px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.todobar_input {
+    width: 85%;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: lighter;
+    outline: none;
+    border: none;
+}
+
+.todobar_box:focus-within {
+    border: 1px solid rgba(0, 128, 0, 0.747);
+}
+
+.todobar_add_btn {
+    width: 15%;
+    background-color: rgba(0, 128, 0, 0.747);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: lighter;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    outline: none;
+    transition: background-color 0.4s;
+}
+.todobar_add_btn:hover {
+    background-color: rgba(7, 143, 7, 0.63);
+}
+
+.hidedone_box {
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    -border: 1px solid magenta;
+    justify-content: flex-end;
+}
+.hidedone_inner {
+    padding-top: 10px;
+    -border: 1px solid red;
+    position: relative;
+}
+
+.hidedone_text {
+    font-size: 18px;
+    margin-right: 20px;
+}
+.hidedone_check {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 14px;
+    right: -4px;
+    margin: 0;
+    padding: 0;
+}
+
+.todos_box {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.todobox,
+.todobox_hide {
+    display: flex;
+    font-weight: lighter;
+    font-size: 22px;
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 5px;
+}
+.todo_check {
+    margin-left: -2px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+.not-crossed,
+.crossed {
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+.crossed {
+    color: rgba(146, 146, 146, 0.733);
+    text-decoration: line-through;
+}
+
+.todobox_hide {
+    display: none;
+}
+
+.msg_box {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.empty_msg,
+.alldone_msg {
+    width: 100%;
+    padding: 80px 0px;
+    border-radius: 5px;
+    color: rgba(185, 185, 185, 0.788);
+}
+
+.alldone_msg {
+    display: none;
+}
+
+.alldone_msg > .img_box {
+    width: 85px;
+    height: 70px;
+}
+.show {
+    color: rgba(94, 94, 94, 0.849);
+}
+.img_box {
+    width: 100px;
+    height: 80px;
+    margin: 0 auto;
+}
+.img_box > img {
+    width: 100%;
+    height: 100%;
+}
+
+.msg_body {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.alldonehidden_msg {
+    display: none;
+}
+
+.textarea {
+    margin-top: 10px;
+    width: 37.79%;
+    height: 150px;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+    border: 1px solid rgba(112, 112, 112, 0.507);
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: lighter;
+}
+.textarea:focus {
+    border: 1px solid rgba(0, 128, 0, 0.747);
+}
+
+.inputbox {
+    text-align: center;
+}
+
+.info {
+    font-size: 12px;
+    margin-left: 40px;
+    border: 1px solid rgb(10, 110, 177);
+    color: rgb(10, 110, 177);
+    padding: 0;
+    align-self: flex-start;
+    border-radius: 50%;
+    padding: 0px 5.5px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 7px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.sidebar,
+.sidebar_show {
+    position: fixed;
+    border-left: 1px solid rgba(112, 112, 112, 0.507);
+    border-top: 1px solid rgba(112, 112, 112, 0.26);
+    top: 0;
+    right: -25%;
+    width: 25%;
+    height: 100vh;
+    background-color: #fff;
+    transition: right 1s;
+}
+.sidebar_show {
+    right: 0;
+}
+
+.sidebar_header {
+    height: 4%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    overflow: hidden;
+}
+.sidebar_header > p {
+    width: 80%;
+    text-overflow: ellipsis;
+}
+.sidebar_header > span {
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.sidebar_body {
+    border-top: 1px solid rgba(112, 112, 112, 0.219);
+    height: 85%;
+    padding: 10px 20px;
+}
